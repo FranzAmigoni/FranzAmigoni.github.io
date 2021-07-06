@@ -39,11 +39,13 @@
    src="//rf.revolvermaps.com/0/0/6.js?i=5mnncmxxqfe&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async">
 </script>
 // create a button with an icon and a text
-var oButton2 = new sap.ui.commons.Button({
+<script type="text/javascript" 
+	var oButton2 = new sap.ui.commons.Button({
 	text : "200px wide Button with icon",
 	icon : "images/save-icon.gif",
 	width: "200px",
 	press : function() {alert('Alert from ' + oButton2.getText());}
+</script>	
 });
 // attach it to some other element in the page
 oButton2.placeAt("sample2");
