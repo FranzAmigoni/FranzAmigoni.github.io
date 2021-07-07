@@ -52,16 +52,7 @@ function myFunction() {
   alert(vid.currentSrc);
 } 
 </script> 
-<script>
-if(typeof(EventSource) !== "undefined") {
-  var source = new EventSource("demo_sse.php");
-  source.onmessage = function(event) {
-    document.getElementById("result").innerHTML += event.data + "<br>";
-  };
-} else {
-  document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
-}
-</script>
+
 <hr>	
 	
 <iframe title="Dosi Vaccino Distribuite in Italia " aria-label="Grafici a colonne raggruppate" id="datawrapper-chart-yqRJp" src="https://datawrapper.dwcdn.net/yqRJp/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="711"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();      
@@ -77,10 +68,13 @@ if(typeof(EventSource) !== "undefined") {
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>	
 <script src="alert.js"></script>
-
+	
+<script type="text/javascript">
 $( function() {
     $( "#dialog" ).dialog();
   } );	
+</script>
+	
 <div id="dialog" title="Error Title">
   <p>The content error here.</p>
 </div>	
