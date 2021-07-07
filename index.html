@@ -77,7 +77,13 @@ if(typeof(EventSource) !== "undefined") {
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>	
 <script src="alert.js"></script>
-$.alert("Message here","Title here");
+
+$( function() {
+    $( "#dialog" ).dialog();
+  } );	
+<div id="dialog" title="Error Title">
+  <p>The content error here.</p>
+</div>	
 	
 </body>
 	
