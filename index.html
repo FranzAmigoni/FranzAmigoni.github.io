@@ -2,10 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Current Weather</title>
+  <title>Let Clint says the Current Weather</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
   <link href="style.css" rel="stylesheet"> 
-<script  type="text/javascript"> const key = '77837a101dcbfd5dbf23e9ea388d31ce';
+  
+  <link rel="icon" 
+      type="image/png" 
+      href="/images/Clint.png" />	
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+	id="sap-ui-bootstrap"
+        data-sap-ui-theme="sap_bluecrystal"
+	data-sap-ui-libs="sap.m">
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>	  
+  
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}">
+  <label for="myBrowser">Choose a browser from this list:</label>
+<input list="browsers" id="myBrowser" name="myBrowser" />
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>
+  
+  <script  type="text/javascript"> const key = '77837a101dcbfd5dbf23e9ea388d31ce';
 
 function weatherForecast(city) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city+ '&appid=' + key+'&cnt=5')  
@@ -46,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
  });
 </script>
 </head>
-<body>
+<body style="background-color:powderblue;">
     <div class="search-component">
         <input type="text" autocomplete="off" class="text-search" placeholder="Type the City Name..." >
         <input type="button" class="button-search" value="Search">
@@ -60,5 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
     <div>
   <script src="main.js"></script>
+      
+<script type="text/javascript" 
+   src="//rf.revolvermaps.com/0/0/6.js?i=5mnncmxxqfe&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async">
+</script>
+
+<iframe title="Dosi Vaccino Distribuite in Italia " aria-label="Grafici a colonne raggruppate" id="datawrapper-chart-yqRJp" src="https://datawrapper.dwcdn.net/yqRJp/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="711"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();            
 </body>
 </html>
