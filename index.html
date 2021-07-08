@@ -115,6 +115,12 @@ var app2 = new Vue({
     message: 'You loaded this page on ' + new Date().toLocaleString()
   }
 })
+new Vue({
+  el: '...',
+  data: {
+    selected: ''
+  }
+})
 </script>
 	
 <select v-model="selected" multiple>
@@ -125,14 +131,7 @@ var app2 = new Vue({
 <br>
 <span>Selected: {{ selected }}</span>	
 	
-    <div class="main-container">
-        <div>
-            <div id="description"></div>
-            <h1 id="temp"></h1>
-            <div id="location"></div>
-        </div>
-    <div>
-  <script src="main.js"></script>
+<hr>
       
 <script type="text/javascript" 
    src="//rf.revolvermaps.com/0/0/6.js?i=5mnncmxxqfe&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async">
