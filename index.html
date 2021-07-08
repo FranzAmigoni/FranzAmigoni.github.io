@@ -35,6 +35,49 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>	
 <script src="alert.js"></script>	
+	
+<script  type="text/javascript"> 
+const key = '77837a101dcbfd5dbf23e9ea388d31ce';
+
+function weatherForecast(city) {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city+ '&appid=' + key+'&cnt=5')  
+    .then(function(resp) {
+        return resp.json() 
+    })
+    .then(function(data) {
+        console.log('--->'+(JSON.stringify(data)));
+        drawWeather(data);
+    })
+    .catch(function() {
+        // catch any errors
+    });
+}
+
+function drawWeather( d ) {
+    var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+    var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
+    var description = d.weather[0].description; 
+    
+    document.getElementById('description').innerHTML = description;
+    document.getElementById('temp').innerHTML = fahrenheit + '&deg;';
+    document.getElementById('location').innerHTML = d.name+' '+d.sys.country;
+}
+
+
+
+//Event Listeners on button click
+document.addEventListener("DOMContentLoaded", () => {
+    // Handling button click
+    document.querySelector(".button-search").addEventListener("click", () => {
+        const searchedCity = document.querySelector('.text-search');
+        console.log(searchedCity.value);
+        if(searchedCity.value){
+            weatherForecast(searchedCity.value);
+        }       
+   }) 
+ });
+</script>
+	
 </head>
 
 <body style="background-color:powderblue;">
@@ -63,52 +106,24 @@ function myFunction() {
 <iframe title="Dosi Vaccino Distribuite in Italia " aria-label="Grafici a colonne raggruppate" id="datawrapper-chart-yqRJp" src="https://datawrapper.dwcdn.net/yqRJp/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="711"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();      
 
 
-<script type="text/javascript">
-
-  jQuery(function($){
-
-    function getWeather(){
-      $.ajax('https://api.openweathermap.org/data/2.5/weather?zip=20068,IT&appid=77837a101dcbfd5dbf23e9ea388d31ce', {
-        dataType: 'jsonp',
-        success: function(json) {
-          $('div#city strong').text(json.main.temp)
-          $('div#icon').html('<img src=' + json.main.temp + '>')
-          $('div#weather').text(json.main.pressure + " " + json.clouds.all);
-          $('div#time').text(json.dt);
-        }
-      });
-    }
-
-    $('a.get_weather').click(function(e) {
-      e.preventDefault();
-      $(this).hide();
-      getWeather();
-      $('#result').fadeIn(1000);
-    });
-
-    $('a.hide').click(function(e) {
-      e.preventDefault();
-      $('#result').hide();
-      $('a.get_weather').show();
-    })
-
-  })
-
-  </script>
-
 <header class="seats-header">
   <h1>Weather</h1>
 </header>	
 
-<div><a href="#" class="get_weather">Get weather</a></div>
-  <div id="result">
-    <div id="icon"></div>
-    <div id="city"><strong></strong></div>
-    <div id="weather"></div>
-    <div id="time"></div>
-    <div><a href="#" class="hide">Hide</a>
-  </div>
-	
+    <div class="search-component">
+        <input type="text" autocomplete="off" class="text-search" placeholder="Type the City Name..." >
+        <input type="button" class="button-search" value="Search">
+    </div>
+
+    <div class="main-container">
+        <div>
+            <div id="description"></div>
+            <h1 id="temp"></h1>
+            <div id="location"></div>
+        </div>
+    <div>
+  <script src="main.js"></script>
+	    
 </body>
 	
 </html>
