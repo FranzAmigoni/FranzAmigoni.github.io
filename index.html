@@ -39,12 +39,36 @@
 
 <body style="background-color:powderblue;">
 	
+<script type="text/javascript" 
+   src="//rf.revolvermaps.com/0/0/6.js?i=5mnncmxxqfe&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async">
+</script>
+
+<audio id="myAudio" controls>
+  <source src="songs/S.O.S. (Swallow Our Soul).mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<p style="font-family:courier;">"<b>S.O.S. (Swallow Our Soul)</b>" by Franz Amigoni <sub>created on <a href="https://soundation.com/make-music-online" target="_blank">Soundation.com</a></sub>.</p>	
+<button onclick="myFunction()" type="button">Get current video URL</button><br>
+<hr>
+<script>
+var vid = document.getElementById("myAudio");
+function myFunction() { 
+  alert("Hello\nHow are you?");	
+  alert(vid.currentSrc);
+} 
+</script>
+
+<hr>	
+	
+<iframe title="Dosi Vaccino Distribuite in Italia " aria-label="Grafici a colonne raggruppate" id="datawrapper-chart-yqRJp" src="https://datawrapper.dwcdn.net/yqRJp/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="711"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();      
+
+
 <script type="text/javascript">
 
   jQuery(function($){
 
     function getWeather(){
-      $.ajax('http://api.wunderground.com/api/c6dc8e785d943109/conditions/q/AZ/Chandler.json', {
+      $.ajax('https://api.openweathermap.org/data/2.5/weather?zip=20068,IT&appid=77837a101dcbfd5dbf23e9ea388d31ce', {
         dataType: 'jsonp',
         success: function(json) {
           $('div#city strong').text(json.current_observation.display_location.full)
@@ -71,7 +95,11 @@
   })
 
   </script>
-	
+
+<header class="seats-header">
+  <h1>Weather</h1>
+</header>	
+
 <div><a href="#" class="get_weather">Get weather</a></div>
   <div id="result" style="display: none">
     <div id="icon"></div>
@@ -80,33 +108,6 @@
     <div id="time"></div>
     <div><a href="#" class="hide">Hide</a>
   </div>
-
-	
-<script type="text/javascript" 
-   src="//rf.revolvermaps.com/0/0/6.js?i=5mnncmxxqfe&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async">
-</script>
-
-<audio id="myAudio" controls>
-  <source src="songs/S.O.S. (Swallow Our Soul).mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-<p style="font-family:courier;">"<b>S.O.S. (Swallow Our Soul)</b>" by Franz Amigoni <sub>created on <a href="https://soundation.com/make-music-online" target="_blank">Soundation.com</a></sub>.</p>	
-<button onclick="myFunction()" type="button">Get current video URL</button><br>
-<hr>
-<script>
-var vid = document.getElementById("myAudio");
-function myFunction() { 
-  alert("Hello\nHow are you?");	
-  alert(vid.currentSrc);
-} 
-</script>
-
-<hr>	
-	
-<iframe title="Dosi Vaccino Distribuite in Italia " aria-label="Grafici a colonne raggruppate" id="datawrapper-chart-yqRJp" src="https://datawrapper.dwcdn.net/yqRJp/7/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="711"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();      
-
-
-
 	
 </body>
 	
