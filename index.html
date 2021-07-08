@@ -73,14 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
    }) 
  });
 </script>
-<script>
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
-    message: 'You loaded this page on ' + new Date().toLocaleString()
-  }
-})
-</script>	
+
 </head>
 <body style="background-color:powderblue;">
     <div class="search-component">
@@ -95,6 +88,14 @@ var app2 = new Vue({
     to see my dynamically bound title!
   </span>
 </div>
+<script>
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: 'You loaded this page on ' + new Date().toLocaleString()
+  }
+})
+</script>	
 	
     <div class="main-container">
         <div>
