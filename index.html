@@ -72,7 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
  });
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="/scripts/index.js"></script>	
 </head>
+	
 <body style="background-color:powderblue;">
     <div class="search-component">
         <input type="text" autocomplete="off" class="text-search" placeholder="Type the City Name..." >
@@ -86,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     to see my dynamically bound title!
   </span>
 </div>
-
 	
 <div id="app-4">
   <ol>
@@ -95,25 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </li>
   </ol>
 </div>
-<script>
- var app4 = new Vue({
-  el: '#app-4',
-  data: {
-    todos: [
-      { text: 'Learn JavaScript' },
-      { text: 'Learn Vue' },
-      { text: 'Build something awesome' }
-    ]
-  }
-})
-
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
-    message: 'You loaded this page on ' + new Date().toLocaleString()
-  }
-})
-</script>	
+	
 	
     <div class="main-container">
         <div>
