@@ -115,20 +115,25 @@ var app2 = new Vue({
     message: 'You loaded this page on ' + new Date().toLocaleString()
   }
 })
-new Vue({
-  el: '...',
-  data: {
-    selected: ''
-  }
-})
 </script>
 	
-<select v-model="selected" multiple>
-  <option>A</option>
-  <option>B</option>
-  <option>C</option>
-</select>
-<br>
+<div id="example-6" class="demo">
+  <select v-model="selected" multiple style="width: 50px;">
+    <option>A</option>
+    <option>B</option>
+    <option>C</option>
+  </select>
+  <br>
+  <span>Selected: {{ selected }}</span>
+</div>
+<script>
+new Vue({
+  el: '#example-6',
+  data: {
+    selected: []
+  }
+})
+
 <span>Selected: {{ selected }}</span>	
 	
 <hr>
