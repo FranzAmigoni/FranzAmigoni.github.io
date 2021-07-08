@@ -71,10 +71,10 @@ function myFunction() {
       $.ajax('https://api.openweathermap.org/data/2.5/weather?zip=20068,IT&appid=77837a101dcbfd5dbf23e9ea388d31ce', {
         dataType: 'jsonp',
         success: function(json) {
-          $('div#city strong').text(json.current_observation.display_location.full)
-          $('div#icon').html('<img src=' + json.current_observation.icon_url + '>')
-          $('div#weather').text(json.current_observation.temperature_string + " " + json.current_observation.weather);
-          $('div#time').text(json.current_observation.observation_time_rfc822);
+          $('div#city strong').text(json.main.temp)
+          $('div#icon').html('<img src=' + json.main.temp + '>')
+          $('div#weather').text(json.main.pressure + " " + json.clouds.all);
+          $('div#time').text(json.dt);
         }
       });
     }
