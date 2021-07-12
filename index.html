@@ -90,20 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
   </span>
 </div>
 	
-<select v-model="selected">
-  <option disabled value="">Please select one</option>
-  <option>A</option>
-  <option>B</option>
-  <option>C</option>
-</select>
-<span>Selected: {{ selected }}</span>
-<script>	new Vue({
-  el: '...',
-  data: {
-    selected: ''
-  }
-})
-</script>	
 <div id="app-4">
   <ol>
     <li v-for="todo in todos">
@@ -132,7 +118,7 @@ var app2 = new Vue({
 </script>
 	
 <div id="example-6" class="demo">
-  <select v-model="selected" multiple style="width: 50px;">
+  <select v-model="selected" multiple style="width: 80px;">
     <option>A</option>
     <option>B</option>
     <option>C</option>
@@ -147,7 +133,6 @@ new Vue({
   }
 })
 </script>
-	
  
 	
 <hr>
