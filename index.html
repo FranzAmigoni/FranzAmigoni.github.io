@@ -87,13 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
   {{ message }}
 </div>
 	
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-	
 <div id="app-2">
   <span v-bind:title="message">
     Hover your mouse over me for a few seconds
@@ -108,7 +101,15 @@ var app = new Vue({
     </li>
   </ol>
 </div>
+	
 <script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+	
  var app4 = new Vue({
   el: '#app-4',
   data: {
