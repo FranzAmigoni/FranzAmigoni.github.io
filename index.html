@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 <hr>	
 <div id="app-3">
-  <span v-if="seen">Now you see me</span>
+  <span v-if="seen"> {{ text }}</span>
 </div>
 <hr>	
 <div id="app-4">
@@ -143,7 +143,8 @@ var app3 = new Vue({
   el: '#app-3',
   data: {
     seen: true
-  }
+  },
+text: 'Now you see me'	
 })
 
 var app5 = new Vue({
