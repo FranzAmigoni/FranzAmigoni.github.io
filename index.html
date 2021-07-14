@@ -32,7 +32,7 @@
   <option value="Microsoft Edge">
 </datalist>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<script src="https://unpkg.com/@popperjs/core@2></script>	
+
   <script  type="text/javascript"> const key = '77837a101dcbfd5dbf23e9ea388d31ce';
 
 function weatherForecast(city) {
@@ -82,13 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <input type="button" class="button-search" value="Search">
     </div>
 <hr>
-<script> import { createPopper } from '@popperjs/core';
-const popcorn = document.querySelector('#popcorn');
-const tooltip = document.querySelector('#tooltip');
-createPopper(popcorn, tooltip, {
-  placement: 'right-start',
-});
-</script>								 
+
 <div id="app-2">
   <span v-bind:title="message">
     Hover your mouse over me for a few seconds
