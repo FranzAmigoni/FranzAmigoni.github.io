@@ -82,11 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <input type="button" class="button-search" value="Search">
     </div>
 <hr>
-	
-<div id="components-demo">
-  <button-counter></button-counter>
-</div>	
-	
+		
 <div id="app">
   {{ message }}
 </div>
@@ -117,18 +113,34 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>	
 <hr>
 	
+<div id="components-demo">
+  <button-counter></button-counter>
+</div>	
+
+<div id="components-demo2">
+  <button-counter></button-counter>
+</div>		
+	
+<hr>
+	
 <script>
 
 Vue.component('button-counter', {
   data: function () {
     return {
-      count: 0
+      count: 0,
+      text: null	    
     }
   },
   template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 })	
 
 new Vue({ el: '#components-demo' })
+new Vue({ el: '#components-demo2',
+	data: {  
+	 text: 'Francesco fecit'	
+	}
+	})
 	
 var app = new Vue({
   el: '#app',
