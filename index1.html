@@ -33,7 +33,7 @@
 </datalist>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
-  <script  type="text/javascript"> const key = '77837a101dcbfd5dbf23e9ea388d31ce';
+<script  type="text/javascript"> const key = '77837a101dcbfd5dbf23e9ea388d31ce';
 
 function weatherForecast(city) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city+ '&appid=' + key+'&cnt=5')  
@@ -121,10 +121,23 @@ document.addEventListener("DOMContentLoaded", () => {
   <button-counter></button-counter>
 </div>		
 	
+<alert-box>
+  Something bad happened.
+</alert-box>	
+	
 <hr>
 	
 <script>
-
+	
+Vue.component('alert-box', {
+  template: `
+    <div class="demo-alert-box">
+      <strong>Error!</strong>
+      <slot></slot>
+    </div>
+  `
+})
+	
 Vue.component('button-counter', {
   data: function () {
     return {
@@ -135,6 +148,7 @@ Vue.component('button-counter', {
   template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 })	
 
+	
 var button =  new Vue({ el: '#components-demo' })
 var button2 = new Vue({ el: '#components-demo2',
 	data: {  
