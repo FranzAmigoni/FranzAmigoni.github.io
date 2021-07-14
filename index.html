@@ -135,8 +135,8 @@ Vue.component('button-counter', {
   template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 })	
 
-new Vue({ el: '#components-demo' })
-new Vue({ el: '#components-demo2',
+var button =  new Vue({ el: '#components-demo' })
+var button2 = new Vue({ el: '#components-demo2',
 	data: {  
 	 text: 'Francesco fecit'	
 	}
